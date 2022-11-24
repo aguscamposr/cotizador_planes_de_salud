@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(181, 128, 230);
+    text-align: center;
+    color: beige;
+    font-weight: 600;
+}
+h1 {
+    text-align: center;
+}
+div.text{
+    display: flex;
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    margin-top: 10px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./img/logo_ingresar.jpg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Cotizador de Planes de Salud Cober Medicina Privada</title>
+</head>
+
+
+<body>
+    <div class="text">
+        <img src="./img/logo_ingresar.jpg" width="350px" class="rounded mx-auto d-block" alt="logo">
+        <br>
+        <h1>Cotizador Planes de Salud Cober Medicina Privada</h1>
+        <br>
+        <div class="container m-3 row center text-center">
+            <div class="container m-1 col">
+                <form id="agregar">
+                    <label for="productos">Elija un Plan de Salud</label>
+
+                    <select id="productos" class="form-control">
+                    </select>
+                    <br>
+                    <button class="btn btn-primary">Agregar</button>
+                </form>
+            </div>
+            <div class="container m-1 col">
+                <form id="aumentar">
+                    <div class="form-group">
+                        <label for="Descuento">Porcentaje de Descuento</label>
+                        <input type="number" step="0.01" id="Descuento" class="form-control">
+                    </div>
+                    <button class="btn btn-primary">Descuento</button>
+                </form>
+            </div>
+            <div class="container m-1">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Operacion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items">
+                    </tbody>
+                    <tfoot class="thead-dark">
+                        <tr>
+                            <th>Total: </th>
+                            <th></th>
+                            <th id="total">0</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="container m-1">
+                <button id="ordenar" class="btn btn-primary">
+                    Ordenar
+                </button>
+                <button id="vaciar" class="btn btn-primary">
+                    Vaciar
+                </button>
+                <button id="cotizar" class="btn btn-primary">
+                    Cotizar
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./ClassProducto.js"></script>
+    <script src="./ClassItem.js"></script>
+    <script src="./carrito.js"></script>
+</body>
+
+</html>
